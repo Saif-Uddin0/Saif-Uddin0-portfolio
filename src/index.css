@@ -18,3 +18,69 @@
 *{
     font-family: "Poppins", sans-serif;
 }
+
+
+
+
+.download-btn {
+  position: relative;
+  width: 130px;
+  height: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Outer circle text */
+.circle-svg {
+  width: 100%;
+  height: 100%;
+  animation: spin-slow 10s linear infinite;
+}
+
+.circle-text {
+  font-size: 24px;
+  fill: rgba(255, 255, 255, 0.9);
+  letter-spacing: 7px;
+  text-transform: uppercase;
+  
+}
+
+/* Center purple circle */
+.center-icon {
+  position: absolute;
+  border: 2px solid rgba(255, 255, 255, 0.2);;
+  width: 80px;
+  height: 80px;
+  background: #9d6aff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .3s;
+  box-shadow: 0 0 20px rgba(157,106,255,.4);
+}
+
+/* Hover */
+.center-icon:hover {
+  transform: scale(1.07);
+  background: #8a57ee;
+}
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeIn {
+  /* animation: fadeIn 2s ease forwards; */
+  animation: fade 2s ease-in-out;
+  animation-delay: 0.8s; 
+}
+
+
+

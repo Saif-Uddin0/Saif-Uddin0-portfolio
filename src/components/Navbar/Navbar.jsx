@@ -12,8 +12,8 @@ const Navbar = () => {
             <li>
                 <NavLink to="/" onClick={() => setOpenSidebar(false)}
                     className={({ isActive }) =>
-                        `px-5 py-2.5 rounded-full transition-all duration-500 ${isActive
-                            ? "bg-white text-black"
+                        `px-5 py-2.5 rounded-full transition-all duration-500  ${isActive
+                            ? " bg-accent text-base-300 delay-50"
                             : "text-white hover:text-white/80"
                         }`
                     }
@@ -25,8 +25,8 @@ const Navbar = () => {
             <li>
                 <NavLink to="/about" onClick={() => setOpenSidebar(false)}
                     className={({ isActive }) =>
-                        `px-5 py-2.5 rounded-full transition-all duration-300 ${isActive
-                            ? "bg-white text-black"
+                        `px-5 py-2.5 rounded-full transition-all duration-300  ${isActive
+                            ? " bg-accent text-base-300  delay-50"
                             : "text-white hover:text-white/80"
                         }`
                     }
@@ -38,8 +38,8 @@ const Navbar = () => {
             <li>
                 <NavLink to="/contact" onClick={() => setOpenSidebar(false)}
                     className={({ isActive }) =>
-                        `px-5 py-2.5 rounded-full transition-all duration-300 ${isActive
-                            ? "bg-white text-black"
+                        `px-5 py-2.5 rounded-full transition-all duration-300  ${isActive
+                            ? " bg-accent text-base-300 delay-50"
                             : "text-white hover:text-white/80"
                         }`
                     }
@@ -51,9 +51,10 @@ const Navbar = () => {
     );
 
     return (
-        <div className="bg-base-300/95 z-20 p-0.5">
+        <div className="bg-base-300/95 z-20 p-0.5 sticky top-0">
             <div className="navbar  container mx-auto">
-
+                <div className="absolute top-0 left-5 w-72 h-72 bg-purple-800/30 blur-[120px] rounded-full"></div>
+                <div className="absolute top-0 right-10 w-72 h-72 bg-purple-800/30 blur-[120px] rounded-full"></div>
                 {/* Mobile menu button */}
                 <div className="navbar-start">
                     <button
@@ -75,11 +76,12 @@ const Navbar = () => {
                         <img src={Star} className='w-6' alt="" />
                         SAIF UDDIN
                     </a>
+                    
                 </div>
 
                 {/* Desktop menu */}
                 <div className="navbar-center hidden md:flex">
-                    <ul className="flex gap-10 bg-accent/20 backdrop-blur-xl rounded-full text-accent py-2.5 font-semibold">
+                    <ul className="flex gap-10 bg-accent/10 border border-accent/20 backdrop-blur-lg rounded-full text-accent py-2.5 font-semibold">
                         {links}
                     </ul>
                 </div>
@@ -89,7 +91,7 @@ const Navbar = () => {
                     <a
                         href="#"
                         target="_blank"
-                        className="bg-primary text-accent backdrop-blur-md px-4 py-2.5 shadow  rounded-full text-sm font-medium"
+                        className="bg-primary text-accent px-4 py-2.5 shadow-black  rounded-full text-sm font-medium border border-accent/20"
                     >
                         <span className='flex items-center gap-1'>Resume <FileUser size={18} /></span>
                     </a>
