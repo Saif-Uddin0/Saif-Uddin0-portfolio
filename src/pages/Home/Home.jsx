@@ -2,6 +2,7 @@ import React from 'react';
 import { FaGithub, FaLinkedin, FaGlobe, FaUserCircle } from 'react-icons/fa';
 import Hero from '../../components/Shared/Home/Hero';
 import Maeque from '../../components/Shared/Home/Maeque';
+import OrbitSkills from '../../components/Shared/Home/OrbitSkills';
 
 const Home = () => {
     return (
@@ -11,6 +12,9 @@ const Home = () => {
             </div>
             <div className=''>
                 <Maeque></Maeque>
+            </div>
+            <div>
+                <OrbitSkills></OrbitSkills>
             </div>
         </div>
     );
