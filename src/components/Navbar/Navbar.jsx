@@ -89,7 +89,7 @@ const Navbar = () => {
                 {/* Resume Button */}
                 <div className="navbar-end">
                     <a
-                        href="#"
+                        href="https://drive.google.com/file/d/1TpGAgHrYb-eOBrr5RX8AkIvpDxiGoj4R/view?usp=sharing"
                         target="_blank"
                         className="bg-primary text-accent px-4 py-2.5 shadow-black  rounded-full text-sm font-medium border border-accent/20"
                     >

@@ -4,6 +4,7 @@ import { Download } from "lucide-react";
 import Img from '../../../assets/imgme3.png'
 import Bg from '../../../assets/bg1.png'
 import logo from '../../../assets/Star 1.png'
+import { Link } from "react-router-dom";
 const Hero = () => {
     return (
         <section className="relative overflow-hidden  text-accent py-24 ">
@@ -21,7 +22,7 @@ const Hero = () => {
 
                     {/* Heading */}
                     <h1 className="animate-fadeIn text-2xl font-semibold ">
-
+                    
                         
                         <span className="">Hey, I'm Saif,</span>
 
@@ -78,7 +79,9 @@ const Hero = () => {
                     />
 
                     {/* Circular Download Button */}
-                    <div className="absolute  flex bottom-8 ;left-50 justify-center">
+                    <a href="https://drive.google.com/file/d/1TpGAgHrYb-eOBrr5RX8AkIvpDxiGoj4R/view?usp=sharing"
+                    target="_blank"
+                     className="absolute  flex bottom-8 ;left-50 justify-center">
                         <div className="absolute top-0 left-5 w-72 h-72 bg-purple-900/30 blur-[120px] rounded-full"></div>
                         <div className="absolute top-0 right-10 w-72 h-72 bg-purple-900/20 blur-[120px] rounded-full"></div>
                         <div class="download-btn">
@@ -103,7 +106,7 @@ const Hero = () => {
                             </div>
                         </div>
 
-                    </div>
+                    </a>
                 </div>
 
             </div>
