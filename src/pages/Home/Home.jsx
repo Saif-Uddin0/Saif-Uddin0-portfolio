@@ -3,6 +3,7 @@ import { FaGithub, FaLinkedin, FaGlobe, FaUserCircle } from 'react-icons/fa';
 import Hero from '../../components/Shared/Home/Hero';
 import Maeque from '../../components/Shared/Home/Maeque';
 import OrbitSkills from '../../components/Shared/Home/OrbitSkills';
+import Project from '../../components/Shared/Home/Project';
 
 const Home = () => {
     return (
@@ -15,6 +16,9 @@ const Home = () => {
             </div>
             <div>
                 <OrbitSkills></OrbitSkills>
+            </div>
+            <div>
+                <Project></Project>
             </div>
         </div>
     );
