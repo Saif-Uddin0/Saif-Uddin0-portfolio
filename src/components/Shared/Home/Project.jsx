@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 import nest from "../../../assets/project-nest.jpg";
 import heroio from "../../../assets/hero.jpg";
 import artify from "../../../assets/artify.jpg";
+import learn from "../../../assets/learnhut.jpg";
+import { ArrowRight } from "lucide-react";
 
 const Project = () => {
   const projects = [
@@ -21,7 +23,13 @@ const Project = () => {
     },
     {
       id: 3,
-      title: "Hero.io Portfolio Website",
+      title: "Learning Based Website",
+      image: learn,
+      link: "#",
+    },
+    {
+      id: 4,
+      title: "Hero.io Application Website",
       image: heroio,
       link: "#",
     },
@@ -62,7 +70,7 @@ const Project = () => {
         Featured Work
       </motion.h1>
       <p className="text-neutral mt-2 text-center text-sm lg:text-md mx-auto leading-relaxed ">
-        Showcasing the work that as  
+        Showcasing the work that as
         <span className="text-secondary"> shaped my journey </span>
         a developer.
       </p>
@@ -74,7 +82,7 @@ const Project = () => {
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto"
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10 max-w-6xl mx-auto"
       >
         {projects.map((project) => (
           <motion.div
@@ -85,16 +93,27 @@ const Project = () => {
               rotate: -1.3,
               transition: { type: "spring", stiffness: 150 },
             }}
-            className="group relative bg-gradient-to-b from-gray-800/70 to-gray-900/80 p-6 rounded-3xl shadow-lg transition-all duration-300 hover:shadow-2xl"
+            className="group relative bg-gradient-to-b from-gray-800/70 to-gray-900/80 p-6 rounded-3xl shadow-lg transition-all duration-300 "
           >
-            <div className="overflow-hidden rounded-2xl shadow-md">
+
+            <div className=" relative group overflow-hidden rounded-2xl shadow-md">
               <motion.img
                 src={project.image}
                 alt={project.title}
                 whileHover={{ scale: 1.08 }}
                 transition={{ duration: 0.5 }}
-                className="rounded-2xl"
+                className="rounded-2xl group-hover:opacity-70 transition-all duration-300"
               />
+              <div className=" absolute 
+                        bottom-5 left-1/2 -translate-x-1/2
+                        opacity-0 group-hover:opacity-100 
+                        transition-all duration-500
+                        bg-accent/10 
+                        backdrop-blur-md 
+                        p-3 rounded-full 
+                        flex items-center justify-center">
+                <ArrowRight className="text-secondary" size={22} />
+              </div>
             </div>
 
             <div className="mt-5 text-center">
@@ -106,7 +125,7 @@ const Project = () => {
                 whileHover={{ scale: 1.1 }}
                 transition={{ type: "spring", stiffness: 200 }}
                 href={project.link}
-                className="inline-block bg-purple-500  text-white px-5 py-2 rounded-xl font-medium transition-all duration-300 group-hover:shadow-lg"
+                className="inline-block bg-gradient-to-r from-primary to-primary/80  text-accent px-5 py-2 rounded-xl font-medium transition-all duration-300 group-hover:shadow-lg"
               >
                 Read More
               </motion.a>
