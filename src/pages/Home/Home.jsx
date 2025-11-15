@@ -17,7 +17,7 @@ const Home = () => {
             <div>
                 <OrbitSkills></OrbitSkills>
             </div>
-            <div>
+            <div className=''>
                 <Project></Project>
             </div>
         </div>
