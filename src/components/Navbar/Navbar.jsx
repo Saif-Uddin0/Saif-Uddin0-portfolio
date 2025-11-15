@@ -23,7 +23,7 @@ const Navbar = () => {
             </li>
 
             <li>
-                <NavLink to="/" onClick={() => setOpenSidebar(false)}
+                <NavLink to="/about" onClick={() => setOpenSidebar(false)}
                     className={({ isActive }) =>
                         `px-5 py-2.5 rounded-full transition-all duration-300  ${isActive
                             ? " bg-accent text-base-300  delay-50"
@@ -36,7 +36,7 @@ const Navbar = () => {
             </li>
 
             <li>
-                <NavLink to="/" onClick={() => setOpenSidebar(false)}
+                <NavLink to="/contact" onClick={() => setOpenSidebar(false)}
                     className={({ isActive }) =>
                         `px-5 py-2.5 rounded-full transition-all duration-300  ${isActive
                             ? " bg-accent text-base-300 delay-50"
