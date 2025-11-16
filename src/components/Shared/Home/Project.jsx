@@ -89,7 +89,7 @@ const Project = () => {
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}
-        className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-6xl mx-auto"
+        className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-6xl mx-auto mt-20"
       >
         {projects.map((project) => (
           <motion.div
