@@ -4,6 +4,7 @@ import nest from "../../../assets/project-nest.jpg";
 import heroio from "../../../assets/hero.jpg";
 import artify from "../../../assets/artify.jpg";
 import learn from "../../../assets/learnhut.jpg";
+import eshop from "../../../assets/E-Shop.jpg";
 import { ArrowRight } from "lucide-react";
 
 const projects = [
@@ -39,14 +40,25 @@ const projects = [
   },
   {
     id: 4,
+    title: "E-Shop – E-Commerece Website",
+    image: eshop,
+    description:
+      "E-Shop is a stylish and user-friendly eCommerce website built with a clean modern interface. The platform includes smart category filtering, a dynamic hero section, intuitive navigation, and an optimized product browsing experience",
+    live: "https://e-shop-sand-chi.vercel.app/",
+    client: "https://github.com/Saif-Uddin0/E-Shop",
+    server: "",
+  },
+  {
+    id: 5,
     title: "Hero.io – Web Application",
     image: heroio,
     description:
       "Hero.io is a UI-focused application project showcasing clean layouts, animations, and dynamic content rendering.",
-    live: "https://app-projet08-saifuddin.netlify.app/",
+    live: "https://web-application-saifuddin.netlify.app/",
     client: "https://github.com/Saif-Uddin0/Hero-App",
     server: "",
   },
+  
 ];
 
 const container = {
