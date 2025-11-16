@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import Star from '../../assets/Star 1.png';
-import { FileUser, X } from 'lucide-react';
+import { FileUser, House, Phone, SearchSlash, X } from 'lucide-react';
+import { FcAbout } from "react-icons/fc";
 
 const Navbar = () => {
 
@@ -12,46 +13,43 @@ const Navbar = () => {
             <li>
                 <NavLink to="/" onClick={() => setOpenSidebar(false)}
                     className={({ isActive }) =>
-                        `px-5 py-2.5 rounded-full transition-all duration-500  ${isActive
-                            ? " bg-accent text-base-300 delay-50"
-                            : "text-white hover:text-white/80"
-                        }`
+                        `px-5 py-3 rounded-full flex gap-1.5 items-center justify-center
+  transition-all duration-500 ease-in-out
+  ${isActive ? "bg-accent text-base-300" : "text-white hover:text-white/80"}`
                     }
                 >
-                    Home
+                    <House size={15} />Home
                 </NavLink>
             </li>
 
             <li>
                 <NavLink to="/about" onClick={() => setOpenSidebar(false)}
                     className={({ isActive }) =>
-                        `px-5 py-2.5 rounded-full transition-all duration-300  ${isActive
-                            ? " bg-accent text-base-300  delay-50"
-                            : "text-white hover:text-white/80"
-                        }`
+                        `px-5 py-3 rounded-full flex gap-1.5 items-center justify-center
+  transition-all duration-500 ease-in-out
+  ${isActive ? "bg-accent text-base-300" : "text-white hover:text-white/80"}`
                     }
                 >
-                    About
+                    <FcAbout size={17} />About
                 </NavLink>
             </li>
 
             <li>
                 <NavLink to="/contact" onClick={() => setOpenSidebar(false)}
                     className={({ isActive }) =>
-                        `px-5 py-2.5 rounded-full transition-all duration-300  ${isActive
-                            ? " bg-accent text-base-300 delay-50"
-                            : "text-white hover:text-white/80"
-                        }`
+                        `px-5 py-3 rounded-full flex gap-1.5 items-center justify-center
+  transition-all duration-500 ease-in-out
+  ${isActive ? "bg-accent text-base-300" : "text-white hover:text-white/80"}`
                     }
                 >
-                    Contact
+                    <Phone size={17} />Contact
                 </NavLink>
             </li>
         </>
     );
 
     return (
-        <div className="bg-base-300/95 z-20 p-0.5 sticky top-0">
+        <div className="bg-base-300/95 z-100 p-0.5 sticky top-0">
             <div className="navbar  container mx-auto">
                 <div className="absolute top-0 left-5 w-72 h-72 bg-purple-800/30 blur-[120px] rounded-full"></div>
                 <div className="absolute top-0 right-10 w-72 h-72 bg-purple-800/30 blur-[120px] rounded-full"></div>
@@ -76,12 +74,12 @@ const Navbar = () => {
                         <img src={Star} className='w-6' alt="" />
                         SAIF UDDIN
                     </a>
-                    
+
                 </div>
 
                 {/* Desktop menu */}
                 <div className="navbar-center hidden md:flex">
-                    <ul className="flex gap-10 bg-accent/10 border border-accent/20 backdrop-blur-lg rounded-full text-accent py-2.5 font-semibold">
+                    <ul className="flex gap-10 bg-accent/12 border border-accent/20 backdrop-blur-lg rounded-full text-accent py-0.8 font-semibold">
                         {links}
                     </ul>
                 </div>

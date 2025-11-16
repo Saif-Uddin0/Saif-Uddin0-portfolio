@@ -1,10 +1,11 @@
 import React from "react";
 import { Typewriter } from 'react-simple-typewriter'
-import { Download } from "lucide-react";
+import { ArrowRight, Download } from "lucide-react";
 import Img from '../../../assets/imgme3.png'
 import Bg from '../../../assets/bg1.png'
 import logo from '../../../assets/Star 1.png'
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
+import { FaArrowRight } from "react-icons/fa";
 const Hero = () => {
     return (
         <section className="relative overflow-hidden  text-accent py-24 ">
@@ -56,13 +57,25 @@ const Hero = () => {
 
                 {/* Buttons */}
                 <div className="flex items-center gap-4">
-                    <button className="bg-accent text-base-300 px-6 py-3 rounded-full font-semibold shadow hover:bg-accent/90 transition">
-                        Let's Talk
-                    </button>
-
-                    <button className="bg-accent/10 border border-accent/20 px-6 py-3 rounded-full font-semibold hover:bg-accent/20 transition">
-                        My Works
-                    </button>
+                    <Link
+                  to={`/contact`}
+                  className="group bg-accent flex items-center justify-between gap-1.5 text-base-300 px-6 py-3 rounded-full font-semibold shadow hover:bg-accent/90 transition"
+                >
+                  <span className="transition-all duration-700 ease-in-out group-hover:translate-x-4">
+                    Let's Talk
+                  </span>
+                  <ArrowRight className="transition-all duration-700 ease-in-out group-hover:-translate-x-22" />
+                </Link>
+        {/*  bg-accent px-6 py-3 rounded-full font-semibold shadow hover:bg-accent/90 transition */}
+                    <Link
+                  to={`/about`}
+                  className="group bg-accent/15 z-10  flex items-center justify-between gap-1.5  px-6 py-3 rounded-full font-semibold shadow border border-accent/50 text-accent transition"
+                >
+                  <span className="transition-all duration-700 ease-in-out group-hover:translate-x-4">
+                    My Works
+                  </span>
+                  <ArrowRight className="transition-all duration-700 ease-in-out group-hover:-translate-x-23" />
+                </Link>
                 </div>
             </div>
 

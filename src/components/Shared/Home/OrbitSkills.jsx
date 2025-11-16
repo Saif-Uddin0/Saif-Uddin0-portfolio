@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 
 import html from "../../../assets/html5.svg";
@@ -9,104 +9,103 @@ import firebase from "../../../assets/firebase.svg";
 import node from "../../../assets/nodejs.svg";
 import router from "../../../assets/reactrouter.svg";
 import ex from "../../../assets/Express.js_dark.svg";
+import JS from "../../../assets/javascript.svg";
+import Next from "../../../assets/nextjs_icon_dark.svg";
+import Github from "../../../assets/github_dark.svg";
+import Vercel from "../../../assets/vercel.svg";
 
 const skills = [
-    { icon: html, angle: 0 },
-    { icon: css2, angle: 45 },
-    { icon: tailwind, angle: 90 },
-    { icon: reactdrk, angle: 135 },
-    { icon: firebase, angle: 180 },
-    { icon: node, angle: 225 },
-    { icon: router, angle: 270 },
-    { icon: ex, angle: 315 },
+    { icon: html, angle: 0, label: "HTML" },
+    { icon: css2, angle: 30, label: "CSS" },
+    { icon: tailwind, angle: 60, label: "Tailwind" },
+    { icon: JS, angle: 90, label: "JavaScript" },
+    { icon: reactdrk, angle: 120, label: "React" },
+    { icon: Next, angle: 150, label: "Next.js" },
+    { icon: firebase, angle: 180, label: "Firebase" },
+    { icon: node, angle: 210, label: "Node.js" },
+    { icon: ex, angle: 240, label: "Express" },
+    { icon: router, angle: 270, label: "Router" },
+    { icon: Github, angle: 300, label: "GitHub" },
+    { icon: Vercel, angle: 330, label: "Vercel" },
 ];
 
 const OrbitSkills = () => {
+    const containerRef = useRef(null);
+    const [radius, setRadius] = useState(150);
+
+    // Auto-scale orbit radius responsively
+    useEffect(() => {
+        const resize = () => {
+            if (!containerRef.current) return;
+            const width = containerRef.current.offsetWidth;
+
+            // Clamp radius for perfect responsiveness
+            const newRadius = width * 0.22;
+            const clamped = Math.min(Math.max(newRadius, 110), 180);
+            setRadius(clamped);
+        };
+
+        resize();
+        window.addEventListener("resize", resize);
+        return () => window.removeEventListener("resize", resize);
+    }, []);
+
     return (
-        <div className="mt-30">
+        <div className="mt-15">
             {/* Section Title */}
             <div className="text-center">
-                <h1 className="text-4xl lg:text-5xl font-bold text-accent tracking-tight">
+                <h1 className="text-4xl md:text-5xl font-bold text-accent">
                     Comfortable Skills
                 </h1>
-                <p className="text-neutral mt-3 text-sm lg:text-md mx-auto leading-relaxed">
-                    Technologies I use confidently to build
-                    <span className="text-secondary"> fast, modern, and interactive </span>
+                <p className="text-neutral text-sm md:text-md mt-3">
+                    Technologies I use to build{" "}
+                    <span className="text-secondary font-semibold">fast and modern</span>{" "}
                     web applications.
                 </p>
-                <div className="border border-accent/20 px-50 container mx-auto mt-5"></div>
             </div>
+                <div className="border border-primary/40 px-50 container mx-auto mt-5"></div>
 
-            {/* Orbit Wrapper */}
-            <div className="relative w-full h-[70vh] md:h-[80vh] lg:h-[90vh] flex justify-center items-center overflow-visible mt-0 lg:-mt-10">
-
+            {/* Orbit Container */}
+            <div
+                ref={containerRef}
+                className="relative mx-auto w-full max-w-4xl aspect-square flex items-center justify-center"
+            >
                 {/* Center Bubble */}
-                <div className="
-                    px-6 py-3 rounded-full bg-primary text-accent min-w-20
-                    font-bold text-sm z-20 shadow-lg border border-accent/30
-                ">
+                <div
+                    className="
+          z-20 px-6 py-3 rounded-full bg-primary text-accent font-bold
+          shadow-lg border border-accent/30
+          absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
+        "
+                >
                     My Stack
                 </div>
 
-                {/* Orbit Elements */}
+                {/* Orbit Skill Items */}
                 {skills.map((s, i) => {
-                    // RESPONSIVE RADIUS
-                    const radius = {
-                        base: 120,   // mobile
-                        sm: 150,     // small devices
-                        md: 200,     // mid screens
-                        lg: 260,     // laptops
-                        xl: 300,     // big screens
-                    };
-
-                    const r =
-                        window.innerWidth < 480 ? radius.base :
-                        window.innerWidth < 640 ? radius.sm :
-                        window.innerWidth < 1024 ? radius.md :
-                        window.innerWidth < 1440 ? radius.lg :
-                        radius.xl;
-
-                    const x = Math.cos((s.angle * Math.PI) / 180) * r;
-                    const y = Math.sin((s.angle * Math.PI) / 180) * r;
+                    const rad = (s.angle * Math.PI) / 180;
+                    const x = Math.cos(rad) * radius;
+                    const y = Math.sin(rad) * radius;
 
                     return (
-                        <React.Fragment key={i}>
-
-                            {/* Connecting Line */}
-                            <motion.div
-                                className="absolute bg-gray-500/40"
-                                style={{
-                                    width: `${r}px`,
-                                    height: "1.5px",
-                                    left: "50%",
-                                    top: "50%",
-                                    transformOrigin: "left center",
-                                }}
-                                animate={{ rotate: s.angle }}
-                                transition={{ duration: 0.8, ease: "easeOut" }}
-                            />
-
-                            {/* Skill Icon */}
-                            <motion.img
-                                src={s.icon}
-                                className="
-                                    w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14
-                                    absolute drop-shadow-xl
-                                    hover:scale-110 transition-all duration-300
-                                "
-                                style={{
-                                    left: `calc(50% + ${x}px - 28px)`,
-                                    top: `calc(50% + ${y}px - 28px)`,
-                                }}
-                            />
-                        </React.Fragment>
+                        <motion.div
+                            key={i}
+                            className="
+                absolute flex flex-col items-center
+                bg-accent/10 backdrop-blur-md p-3 rounded-2xl shadow-lg
+                hover:scale-110 transition-all duration-500 border border-accent/20
+              "
+                            style={{
+                                top: `calc(50% + ${y}px)`,
+                                left: `calc(50% + ${x}px)`,
+                                transform: "translate(-50%, -50%)",
+                            }}
+                        >
+                            <img src={s.icon} className="w-10 h-10 sm:w-12 sm:h-12" alt={s.label} />
+                            <p className="text-accent text-[10px] sm:text-xs mt-1">{s.label}</p>
+                        </motion.div>
                     );
                 })}
-
-                {/* Subtle Grid Background */}
-                <div className="absolute inset-0 pointer-events-none opacity-20">
-                    <div className="w-full h-full bg-[radial-gradient(#ffffff22_1px,transparent_1px)]" />
-                </div>
             </div>
         </div>
     );
