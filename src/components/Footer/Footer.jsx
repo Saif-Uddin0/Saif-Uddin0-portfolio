@@ -1,6 +1,8 @@
 import React from "react";
 import { Linkedin, Instagram, Dribbble, Phone, GithubIcon } from "lucide-react";
 import logo from '../../assets/Star 1.png'
+import { Link } from "react-router-dom";
+
 
 const Footer = () => {
     return (
@@ -18,9 +20,11 @@ const Footer = () => {
                         web development.
                     </h2>
 
-                    <button className="mt-8 bg-accent text-base-300 px-6 py-3 rounded-full font-semibold flex items-center gap-2 justify-center mx-auto shadow hover:bg-accent/90 transition border border-accent/20">
-                        <Phone size={17} />Contact
-                    </button>
+                    <Link to={'/contact'}>
+                        <button className="mt-8 bg-accent text-base-300 px-6 py-3 rounded-full font-semibold flex items-center gap-2 justify-center mx-auto shadow hover:bg-accent/90 transition border border-accent/20">
+                            <Phone size={17} />Contact
+                        </button>
+                    </Link>
                 </div>
 
                 {/* Divider */}

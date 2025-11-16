@@ -79,7 +79,7 @@ const Navbar = () => {
 
                 {/* Desktop menu */}
                 <div className="navbar-center hidden md:flex">
-                    <ul className="flex gap-10 bg-accent/12 border border-accent/20 backdrop-blur-lg rounded-full text-accent py-0.8 font-semibold">
+                    <ul className="flex gap-10 backdrop-blur-md bg-accent/5 border border-accent/20  rounded-full text-accent py-0.8 font-semibold">
                         {links}
                     </ul>
                 </div>
