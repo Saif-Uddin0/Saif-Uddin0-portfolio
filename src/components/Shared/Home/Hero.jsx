@@ -26,7 +26,7 @@ const Hero = () => {
                     </span>
 
                     {/* Heading */}
-                    <h1 className="animate-fadeIn text-2xl font-semibold ">
+                    <h1 className="animate-fadeIn text-2xl ">
 
 
                         <span className="font-medium mb-1">Hey, I'm Saif,</span>

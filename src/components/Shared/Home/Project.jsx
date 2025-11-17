@@ -126,9 +126,10 @@ const Project = () => {
                 whileHover={{ opacity: 1 }}
                 transition={{ duration: 0.3 }}
               >
-                <div className="bg-primary p-4 rounded-full shadow-lg border border-accent/70">
-                  <ArrowRight size={30} className="text-black" />
-                </div>
+                <a href={project.live}
+                  target="_blank" className="bg-primary p-4 rounded-full shadow-lg border border-accent/70">
+                  <ArrowRight size={30} className="text-accent" />
+                </a>
               </motion.div>
             </div>
 
