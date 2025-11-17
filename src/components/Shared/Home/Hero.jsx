@@ -12,7 +12,7 @@ const Hero = () => {
         <section className="relative overflow-hidden  text-accent py-24 ">
 
 
-            <div className="container mx-auto px-6 lg:px-20 flex flex-col md:flex-row items-center justify-between gap-10 ">
+            <div className="container mx-auto px-10 lg:px-20 flex flex-col md:flex-row items-center justify-between gap-10">
                 {/* ===== LEFT TEXT SECTION ===== */}
                 <motion.div
                     initial={{ opacity: 0, y: 40 }}
