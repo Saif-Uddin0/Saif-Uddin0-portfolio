@@ -1,5 +1,6 @@
 import React from "react";
 import { Typewriter } from 'react-simple-typewriter'
+import { motion } from "framer-motion";
 import { ArrowRight, Download } from "lucide-react";
 import Img from '../../../assets/imgme3.png'
 import Bg from '../../../assets/bg1.png'
@@ -11,10 +12,13 @@ const Hero = () => {
         <section className="relative overflow-hidden  text-accent py-24 ">
 
 
-            <div className="container mx-auto px-10 lg:px-20 flex flex-col md:flex-row items-center justify-between gap-12">
-
+            <div className="container mx-auto px-6 lg:px-20 flex flex-col md:flex-row items-center justify-between gap-10 ">
                 {/* ===== LEFT TEXT SECTION ===== */}
-                <div className="w-full md:w-1/2 px-2 lg:px-20">
+                <motion.div
+                    initial={{ opacity: 0, y: 40 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8 }}
+                    className="w-full md:w-1/2 lg:px-7 ">
 
                     {/* Badge */}
                     <span className="inline-block bg-accent/10 text-neutral px-2 py-2 rounded-full text-sm mb-5 backdrop-blur border border-accent/20">
@@ -25,18 +29,18 @@ const Hero = () => {
                     <h1 className="animate-fadeIn text-2xl font-semibold ">
 
 
-                        <span className="">Hey, I'm Saif,</span>
+                        <span className="font-medium mb-1">Hey, I'm Saif,</span>
 
                         {/* Line 2 — Fade In */}
                         <div className=" text-4xl mt-2 lg:text-5xl font-bold text-primary">
                             <span className="text-accent">A</span>
                             {/* Typewriter Line */}
                             <Typewriter
-                                words={[` Mern Stack Developer`]}
+                                words={[" Mern Stack Developer."]}
                                 loop={true}
-                                typeSpeed={40}
+                                typeSpeed={50}
                                 cursor
-                                deleteSpeed={40}
+                                deleteSpeed={50}
                             />
 
                         </div>
@@ -50,13 +54,13 @@ const Hero = () => {
 
 
                     {/* Subtitle */}
-                    <p className="text-accent/60 leading-relaxed mb-8">
+                    <p className="text-accent/70 leading-relaxed mb-8">
                         Building functional, user-friendly and modern web interfaces that help
                         your business grow and improve user engagement.
                     </p>
 
                     {/* Buttons */}
-                    <div className="flex  items-center gap-4">
+                    <div className="flex  items-center gap-4 pt-2">
                         <Link
                             to={`/contact`}
                             className="group bg-accent flex items-center justify-between gap-1.5 text-base-300 px-6 py-3 rounded-full font-semibold shadow hover:bg-accent/90 transition"
@@ -77,10 +81,14 @@ const Hero = () => {
                             <ArrowRight className="transition-all duration-700 ease-in-out group-hover:-translate-x-23" />
                         </Link>
                     </div>
-                </div>
+                </motion.div>
 
                 {/* ===== RIGHT IMAGE SECTION ===== */}
-                <div className="w-full  flex justify-center  relative">
+                <motion.div
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 1 }}
+                    className="relative w-full md:w-1/2 flex justify-center">
 
                     {/* Hexagon Image Container */}
                     <div className="relative bg-base-300 rounded-[40px] overflow-hidden flex items-end justify-center border border-accent/15 shadow-xl ">
@@ -122,7 +130,7 @@ const Hero = () => {
                         </a>
                     </div>
 
-                </div>
+                </motion.div>
             </div>
         </section >
     );
