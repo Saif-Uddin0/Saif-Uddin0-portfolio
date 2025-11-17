@@ -39,14 +39,14 @@ const Footer = () => {
                     </p>
 
                     {/* Social Icons */}
-                    <div className="flex text-purple-400 backdrop-blur-md  items-center gap-6 mx-auto">
-                        <a className="hover:scale-110 transition duration-500 hover:text-accent" href="#" target="_balnk">
+                    <div className="flex text-center backdrop-blur-md  items- gap-6 mx-auto">
+                        <a   className="hover:scale-110 transition duration-500 hover:text-purple-400" href="https://www.instagram.com/__m_a__h__i_r__/" target="_balnk">
                             <Instagram size={24} />
                         </a>
-                        <a className="hover:scale-110 transition duration-500 hover:text-accent" href="#" target="_balnk">
+                        <a className="hover:scale-110 transition duration-500 hover:text-purple-400" href="https://www.linkedin.com/in/saif-uddin-a55139335/" target="_balnk">
                             <Linkedin size={24} />
                         </a>
-                        <a className="hover:scale-110 transition duration-500 hover:text-accent" href="#" target="_balnk">
+                        <a className="hover:scale-110 transition duration-500 hover:text-purple-400" href="https://github.com/Saif-Uddin0?tab=repositories" target="_blank">
                             <GithubIcon size={24} />
                         </a>
                     </div>
