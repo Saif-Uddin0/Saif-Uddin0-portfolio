@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1,
+        "title": "Artify Gallery Website",
+        "image": "https://i.postimg.cc/BZ171219/artify.jpg",
+        "description": "Artify is a modern MERN-based artwork marketplace with category filtering, secure authentication, wishlist, and user dashboard. Built with React, Node.js, MongoDB, and Firebase.",
+        "live": "https://artify-c4d2a.web.app/ ",
+        "client": "https://github.com/Saif-Uddin0/Artify-clinet ",
+        "server": "https://github.com/Saif-Uddin0/Artify-Server"
+    },
+    {
+        "id": 2,
+        "title": "Edu-Care Modern educational platform",
+        "image": "https://i.postimg.cc/xTff27G6/Edu-Care.jpg",
+        "description": "The platform features a clean and responsive UI, interactive course cards, category filters, and user-friendly navigation to enhance the learning experience.",
+        "live": " https://edu-care-xi.vercel.app/",
+        "client": "https://github.com/Saif-Uddin0/Edu-Care",
+        "server": ""
+    },
+    {
+        "id": 3,
+        "title": "Nest Ecommerce Website",
+        "image": "https://i.postimg.cc/qvp1YYDx/project-nest.jpg",
+        "description": "Nest Mart is a responsive grocery e-commerce platform built with React & Tailwind. It features category filtering, product details pages, beautiful UI, and reusable components.",
+        "live": "https://nest-mart-and-grosery.vercel.app/",
+        "client": "https://github.com/Saif-Uddin0/Nest-Mart-And-Grosery",
+        "server": ""
+    },
+    {
+        "id": 4,
+        "title": "Learn Hut – Learning Platform",
+        "image": "https://i.postimg.cc/m2sjzJ4x/learnhut.jpg",
+        "description": "Learn Hut is an educational learning platform with course filtering, clean UI, authentication, and responsive pages. Built using React, Firebase & Tailwind.",
+        "live": "https://learn-hut-f8527.web.app/skill",
+        "client": "https://github.com/Saif-Uddin0/Learn-Hut",
+        "server": ""
+    },
+    {
+        "id": 5,
+        "title": "E-Shop – E-Commerece Website",
+        "image": "https://i.postimg.cc/T2rq60D5/E-Shop.jpg",
+        "description": "E-Shop is a stylish and user-friendly eCommerce website built with a clean modern interface. The platform includes smart category filtering, a dynamic hero section, intuitive navigation, and an optimized product browsing experience.",
+        "live": "https://e-shop-sand-chi.vercel.app/",
+        "client": "https://github.com/Saif-Uddin0/E-Shop",
+        "server": ""
+    },
+    {
+        "id": 6,
+        "title": "Hero.io – Web Application",
+        "image": "https://i.postimg.cc/nzY4vKqh/hero.jpg",
+        "description": "Hero.io is a UI-focused application project showcasing clean layouts, animations, and dynamic content rendering.",
+        "live": "https://web-application-saifuddin.netlify.app/",
+        "client": "https://github.com/Saif-Uddin0/Hero-App",
+        "server": ""
+    }
+]

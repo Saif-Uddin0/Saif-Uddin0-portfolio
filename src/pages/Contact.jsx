@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import bgImg from '.././assets/laptop-half-closed-dark-with-colourful-glow-glasses-paper-cup.jpg'
 import Swal from "sweetalert2";
+import { GithubIcon, Instagram, Linkedin } from "lucide-react";
 
 export default function ContactPage() {
 
@@ -27,11 +28,25 @@ export default function ContactPage() {
                 className="backdrop-blur-md bg-black/40 w-full max-w-3xl rounded-2xl p-10 text-accent shadow-2xl"
             >
                 <h2 className="text-center text-3xl font-bold mb-3">Contact Me</h2>
-                <p className="text-center text-[#cfcfcf] text-sm mb-10">
+                <p className="text-center text-[#cfcfcf] text-sm ">
                     Are you looking for a new website? I can help you.
                     <br />
                     I'm always open to opportunities, collaborations, and new connections.
                 </p>
+                <div className="flex text-center   items-center justify-center gap-6 mx-auto mb-10 mt-3">
+                    <a className="hover:scale-110 transition duration-500 hover:text-purple-500" href="https://www.linkedin.com/in/saif-uddin-a55139335/" target="_balnk">
+                            <Linkedin size={24} />
+                        </a>
+                        <a className="hover:scale-110 transition duration-500 hover:text-purple-500" href="https://github.com/Saif-Uddin0?tab=repositories" target="_blank">
+                            <GithubIcon size={24} />
+                        </a>
+                        <a   className="hover:scale-110 transition duration-500 hover:text-purple-500" href="https://www.instagram.com/__m_a__h__i_r__/" target="_balnk">
+                            <Instagram size={24} />
+                        </a>
+                        
+                    </div>
+
+                
 
                 {/* Form */}
                 <form className="grid grid-cols-1 md:grid-cols-2 gap-6">

@@ -6,49 +6,61 @@ import ErrorPage from '../pages/Error/ErrorPage';
 import Details from '../Layout.jsx/Details';
 import ContactPage from '../pages/Contact';
 import AboutPage from '../pages/AboutPage';
+import ExploreProjects from '../pages/ExploreProjects/ExploreProjects';
+import ProjectDetails from '../components/Shared/ProjectDetails';
 
 
 
 export const router = createBrowserRouter([
   {
     path: "/",
-    Component: Root,
+    element: <Root />,
     errorElement: <ErrorPage />,
     children: [
       {
         index: true,
-        Component: Home,
+        element: <Home />,
       },
       {
-        path: '/about',
-        element: <AboutPage></AboutPage>
+        path: "about",
+        element: <AboutPage />,
       },
       {
-        path: '/contact',
-        element: <ContactPage></ContactPage>
+        path: "contact",
+        element: <ContactPage />,
+      },
+      {
+        path: "projects",
+        element: <ExploreProjects />,
+      },
+      {
+        path: "project-details/:id",
+        element: <ProjectDetails />,
       },
     ],
   },
+
   {
-    path: '/details',
-    element: <Details></Details>,
-    children:[
+    path: "/details",
+    element: <Details />,
+    children: [
       {
-        path: '/details/nest-shop',
-        element: <h1>nest shop</h1>
+        path: "nest-shop",
+        element: <h1>nest shop</h1>,
       },
       {
-        path: '/details/artify',
-        element: <h1>artify</h1>
+        path: "artify",
+        element: <h1>artify</h1>,
       },
       {
-        path: '/details/learnhut',
-        element: <h1>larnhut</h1>
+        path: "learnhut",
+        element: <h1>learnhut</h1>,
       },
       {
-        path: '/details/heroio',
-        element: <h1>heroio</h1>
+        path: "heroio",
+        element: <h1>heroio</h1>,
       },
-    ]
-  }
+    ],
+  },
 ]);
+

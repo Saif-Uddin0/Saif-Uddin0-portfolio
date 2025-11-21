@@ -12,7 +12,7 @@ const Hero = () => {
         <section className="relative overflow-hidden  text-accent py-24 ">
 
 
-            <div className="container mx-auto px-10 lg:px-20 flex flex-col md:flex-row items-center justify-between gap-10">
+            <div className="max-w-7xl mx-auto px-10 lg:px-20 flex flex-col md:flex-row items-center justify-between gap-10">
                 {/* ===== LEFT TEXT SECTION ===== */}
                 <motion.div
                     initial={{ opacity: 0, y: 40 }}
@@ -106,7 +106,7 @@ const Hero = () => {
                             <div className="absolute top-0 left-5 w-72 h-72 bg-purple-900/30 blur-[120px] rounded-full"></div>
                             <div className="absolute top-0 right-10 w-72 h-72 bg-purple-900/20 blur-[120px] rounded-full"></div>
                             <div class="download-btn">
-                                <svg viewBox="0 0 300 300" class="circle-svg">
+                                <svg viewBox="0 0 300 300" className="circle-svg">
                                     <defs>
                                         <path id="circlePath"
                                             d="M150,150 m-120,0 a120,120 0 1,1 240,0 a120,120 0 1,1 -240,0" />
@@ -122,7 +122,7 @@ const Hero = () => {
                                 <div class="center-icon">
                                     <svg width="40" height="40" viewBox="0 0 24 24" className="">
                                         <path d="M12 3v14m0 0l-5-5m5 5l5-5M5 21h14"
-                                            stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" />
+                                            stroke="#fff" strokeWidth="2" fill="none" strokeLinecap="round" />
                                     </svg>
                                 </div>
                             </div>

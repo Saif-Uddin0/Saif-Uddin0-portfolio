@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import Star from '../../assets/Star 1.png';
-import { FileUser, House, Phone, SearchSlash, X } from 'lucide-react';
+import { FileUser, FolderOpenDot, GithubIcon, House, Instagram, Linkedin, MessageCircleWarning, Phone, SearchSlash, X } from 'lucide-react';
 import { FcAbout } from "react-icons/fc";
 
 const Navbar = () => {
@@ -21,6 +21,17 @@ const Navbar = () => {
                     <House size={15} />Home
                 </NavLink>
             </li>
+            <li>
+                <NavLink to="/projects" onClick={() => setOpenSidebar(false)}
+                    className={({ isActive }) =>
+                        `px-5 py-3 rounded-full flex gap-1.5 items-center justify-center
+  transition-all duration-500 ease-in-out
+  ${isActive ? "bg-accent text-base-300" : "text-white hover:text-white/80"}`
+                    }
+                >
+                    <FolderOpenDot size={17} />Explore Projects
+                </NavLink>
+            </li>
 
             <li>
                 <NavLink to="/about" onClick={() => setOpenSidebar(false)}
@@ -30,7 +41,7 @@ const Navbar = () => {
   ${isActive ? "bg-accent text-base-300" : "text-white hover:text-white/80"}`
                     }
                 >
-                    <FcAbout size={17} />About
+                    <MessageCircleWarning size={17} />About
                 </NavLink>
             </li>
 
@@ -45,6 +56,7 @@ const Navbar = () => {
                     <Phone size={17} />Contact
                 </NavLink>
             </li>
+            
         </>
     );
 
@@ -57,7 +69,7 @@ const Navbar = () => {
                 <div className="navbar-start">
                     <button
                         onClick={() => setOpenSidebar(true)}
-                        className="btn btn-ghost md:hidden"
+                        className="btn btn-ghost lg:hidden"
                     >
                         <svg xmlns="http://www.w3.org/2000/svg"
                             className="h-6 w-6"
@@ -78,7 +90,7 @@ const Navbar = () => {
                 </div>
 
                 {/* Desktop menu */}
-                <div className="navbar-center hidden md:flex">
+                <div className="navbar-center hidden lg:flex">
                     <ul className="flex gap-10 backdrop-blur-md bg-accent/5 border border-accent/20  rounded-full text-accent py-0.8 font-semibold">
                         {links}
                     </ul>
@@ -118,6 +130,20 @@ const Navbar = () => {
                     {links}
 
                 </ul>
+                <div className='h-[1px] bg-accent/20 px-5 my-3'></div>
+                <div className="flex text-center   items-center justify-center gap-6 mx-auto  p-5 space-x-3">
+                    <a className="hover:scale-110 transition duration-500 hover:text-purple-500" href="https://github.com/Saif-Uddin0?tab=repositories" target="_blank">
+                        <GithubIcon size={26} />
+                    </a>
+                    <a className="hover:scale-110 transition duration-500 hover:text-purple-500" href="https://www.linkedin.com/in/saif-uddin-a55139335/" target="_balnk">
+                        <Linkedin size={26} />
+                    </a>
+
+                    <a className="hover:scale-110 transition duration-500 hover:text-purple-500" href="https://www.instagram.com/__m_a__h__i_r__/" target="_balnk">
+                        <Instagram size={26} />
+                    </a>
+
+                </div>
             </div>
         </div>
     );
