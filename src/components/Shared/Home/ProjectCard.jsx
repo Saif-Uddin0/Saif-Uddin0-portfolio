@@ -11,13 +11,16 @@ const cardMotion = {
 const ProjectCard = ({ project }) => {
   return (
     <motion.div
-      key={project.id}
       variants={cardMotion}
       whileHover={{ y: -6, scale: 1.02 }}
-      className="relative group bg-[#0e0e16]/60 backdrop-blur-md p-6 rounded-3xl shadow-lg border border-white/10 transition"
+      className="
+        relative group bg-[#0e0e16]/60 backdrop-blur-md 
+        p-5 sm:p-6 rounded-3xl shadow-lg border border-white/10 
+        transition 
+      "
     >
       {/* Project Image */}
-      <div className="relative overflow-hidden rounded-2xl h-[400px]">
+      <div className="relative overflow-hidden rounded-2xl h-[260px] sm:h-[320px] md:h-[380px] lg:h-[420px]">
         <motion.img
           src={project.image}
           alt={project.title}
@@ -37,16 +40,26 @@ const ProjectCard = ({ project }) => {
             target="_blank"
             className="bg-primary p-4 rounded-full shadow-lg border border-accent/70"
           >
-            <ArrowRight size={30} className="text-accent" />
+            <ArrowRight size={28} className="text-accent" />
           </a>
         </motion.div>
       </div>
 
       {/* Info Box */}
-      <div className="mt-5 bg-gradient-to-b from-[#201b3a]/80 to-[#0f0d1c]/80 p-5 rounded-xl border border-white/10 flex flex-col justify-between h-[280px]">
+      <div
+        className="
+          mt-5 bg-gradient-to-b 
+          from-[#201b3a]/80 to-[#0f0d1c]/80 
+          p-5 rounded-xl border border-white/10 
+          flex flex-col justify-between 
+          min-h-[230px] sm:min-h-[250px] md:min-h-[260px]
+        "
+      >
         <div>
-          <h3 className="text-xl font-semibold text-white">{project.title}</h3>
-          <p className="text-neutral text-sm mt-2 leading-relaxed">
+          <h3 className="text-lg md:text-xl font-semibold text-white leading-snug">
+            {project.title}
+          </h3>
+          <p className="text-neutral text-sm mt-2 leading-relaxed line-clamp-4">
             {project.description}
           </p>
         </div>

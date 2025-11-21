@@ -10,9 +10,9 @@
     },
     {
         "id": 2,
-        "title": "Edu-Care Modern educational platform",
+        "title": "EduCare Learning platform",
         "image": "https://i.postimg.cc/xTff27G6/Edu-Care.jpg",
-        "description": "The platform features a clean and responsive UI, interactive course cards, category filters, and user-friendly navigation to enhance the learning experience.",
+        "description": "The platform features a clean and responsive UI, category filters, and user-friendly navigation to enhance the learning experience.",
         "live": " https://edu-care-xi.vercel.app/",
         "client": "https://github.com/Saif-Uddin0/Edu-Care",
         "server": ""

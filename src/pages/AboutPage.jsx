@@ -72,6 +72,7 @@ export default function AboutPage() {
                 >
                     My Workflow
                 </motion.h3>
+                
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     {[1, 2, 3, 4].map((step, index) => (

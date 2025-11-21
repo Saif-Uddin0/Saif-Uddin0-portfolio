@@ -53,11 +53,7 @@ export default function AboutCard({
                             <p>
                                 I am completing my <span className="text-primary">Diploma in Computer Science</span> from <span className="text-primary">Feni Computer Institute</span> (Session 2021-2022), which is helping me build a strong foundation for web development.
                             </p>
-                            <p>
-                                I’m currently completing my industrial attachment at
-                                <span className="text-primary"> BD Calling</span>, where I’m gaining real-world development
-                                experience and learning industry-standard practices.
-                            </p>
+                            
                         </div>
 
                         {/* Footer Gradient */}

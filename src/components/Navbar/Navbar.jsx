@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router';
 import Star from '../../assets/Star 1.png';
 import { FileUser, FolderOpenDot, GithubIcon, House, Instagram, Linkedin, MessageCircleWarning, Phone, SearchSlash, X } from 'lucide-react';
 import { FcAbout } from "react-icons/fc";
@@ -82,10 +82,10 @@ const Navbar = () => {
                     </button>
 
                     {/* Logo */}
-                    <a className="text-lg flex items-center gap-2.5 text-accent font-bold">
+                    <Link to={'/'} className="relative text-lg flex items-center gap-2.5 text-accent font-bold">
                         <img src={Star} className='w-6' alt="" />
                         SAIF UDDIN
-                    </a>
+                    </Link>
 
                 </div>
 
@@ -99,7 +99,7 @@ const Navbar = () => {
                 {/* Resume Button */}
                 <div className="navbar-end">
                     <a
-                        href="https://drive.google.com/file/d/1TpGAgHrYb-eOBrr5RX8AkIvpDxiGoj4R/view?usp=sharing"
+                        href="https://drive.google.com/file/d/1OtFgU8wtysEM3CmwvxjpYb7HEzi-B-ez/view?usp=sharing"
                         target="_blank"
                         className="bg-primary text-accent px-4 py-2.5 shadow-black  rounded-full text-sm font-medium border border-accent/20"
                     >

@@ -72,7 +72,7 @@ const Hero = () => {
                         </Link>
                         {/*  bg-accent px-6 py-3 rounded-full font-semibold shadow hover:bg-accent/90 transition */}
                         <Link
-                            to={`/about`}
+                            to={`/projects`}
                             className="group bg-accent/15 z-10  flex items-center justify-between gap-1.5  px-6 py-3 rounded-full font-semibold shadow border border-accent/50 text-accent transition"
                         >
                             <span className="transition-all duration-700 ease-in-out group-hover:translate-x-4">
@@ -100,7 +100,7 @@ const Hero = () => {
                         />
 
                         {/* Circular Download Button */}
-                        <a href="https://drive.google.com/file/d/1TpGAgHrYb-eOBrr5RX8AkIvpDxiGoj4R/view?usp=sharing"
+                        <a href="https://drive.google.com/file/d/1OtFgU8wtysEM3CmwvxjpYb7HEzi-B-ez/view?usp=sharing"
                             target="_blank"
                             className="absolute  flex bottom-8 ;left-50 justify-center">
                             <div className="absolute top-0 left-5 w-72 h-72 bg-purple-900/30 blur-[120px] rounded-full"></div>
