@@ -100,7 +100,7 @@ const Hero = () => {
                         />
 
                         {/* Circular Download Button */}
-                        <a href="https://drive.google.com/file/d/1OtFgU8wtysEM3CmwvxjpYb7HEzi-B-ez/view?usp=sharing"
+                        <a href="https://drive.google.com/file/d/1ja-S2VE-9bI9jGZkwihO13YxfqPi9V9i/view?usp=drive_link"
                             target="_blank"
                             className="absolute  flex bottom-8 ;left-50 justify-center">
                             <div className="absolute top-0 left-5 w-72 h-72 bg-purple-900/30 blur-[120px] rounded-full"></div>

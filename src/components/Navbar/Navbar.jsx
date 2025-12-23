@@ -56,7 +56,7 @@ const Navbar = () => {
                     <Phone size={17} />Contact
                 </NavLink>
             </li>
-            
+
         </>
     );
 
@@ -99,8 +99,7 @@ const Navbar = () => {
                 {/* Resume Button */}
                 <div className="navbar-end">
                     <a
-                        href="https://drive.google.com/file/d/1OtFgU8wtysEM3CmwvxjpYb7HEzi-B-ez/view?usp=sharing"
-                        target="_blank"
+                        href="https://drive.google.com/file/d/1ja-S2VE-9bI9jGZkwihO13YxfqPi9V9i/view?usp=drive_link"
                         className="bg-primary text-accent px-4 py-2.5 shadow-black  rounded-full text-sm font-medium border border-accent/20"
                     >
                         <span className='flex items-center gap-1'>Resume <FileUser size={18} /></span>
@@ -126,7 +125,7 @@ const Navbar = () => {
                     </button>
                 </div>
 
-                <ul className="menu p-5 space-y-3">
+                <ul className="menu  p-5 space-y-3">
                     {links}
 
                 </ul>
